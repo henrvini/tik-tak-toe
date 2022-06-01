@@ -9,19 +9,21 @@ function handleClick(event) {
     let square = event.target;
     let position = square.id;
 
-    handleMovement(position);
-    updateBoard();
+    if (handleMovement(position)) {
+        setTimeout(() => {
+            alert(
+                `Game Over - ${
+                    playerTime == 0 ? "Player 1" : "Player 2"
+                } is the winner`
+            );
+        }, 10);
+    }
+    updateBoard(position);
 }
 
-function updateBoard() {
-    let squares = document.querySelectorAll(".square");
+function updateBoard(position) {
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
 
-    squares.forEach((square) => {
-        let position = square.id;
-        let symbol = board[position];
-
-        symbol != ""
-            ? (square.innerHTML = `<div class='${symbol}'></div>`)
-            : "";
-    });
+    symbol != "" ? (square.innerHTML = `<div class='${symbol}'></div>`) : "";
 }
