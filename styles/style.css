@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    display: inline-block;
+}
