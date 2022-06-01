@@ -13,3 +13,33 @@ h1 {
     border: 1px solid black;
     display: inline-block;
 }
+
+.player1 {
+    position: relative;
+}
+
+.player1:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274C";
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.player2 {
+    position: relative;
+}
+
+.player2:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\2B55";
+    font-size: 50px;
+    line-height: 100px;
+}
