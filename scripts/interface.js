@@ -27,3 +27,14 @@ function updateBoard(position) {
 
     symbol != "" ? (square.innerHTML = `<div class='${symbol}'></div>`) : "";
 }
+
+function restartGame() {
+    board = ["", "", "", "", "", "", "", "", ""];
+    playerTime = 0;
+    gameOver = false;
+
+    let squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.innerHTML = "<div></div>";
+    });
+}

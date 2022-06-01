@@ -1,7 +1,7 @@
 let board = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0;
-let symbols = ["player1", "player2"];
 let gameOver = false;
+let symbols = ["player1", "player2"];
 let winStates = [
     [0, 1, 2],
     [3, 4, 5],
@@ -26,7 +26,6 @@ function handleMovement(position) {
             playerTime == 0 ? (playerTime = 1) : (playerTime = 0);
         }
     }
-
     return gameOver;
 }
 
@@ -45,6 +44,5 @@ function isWinner() {
             return true;
         }
     }
-
     return false;
 }
